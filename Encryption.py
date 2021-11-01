@@ -1,8 +1,12 @@
 import string
+import sys
+
+
+
 
 up = string.ascii_uppercase
 low = string.ascii_lowercase
-strings  = 'HelLo1223'
+
 
 
 def encryp(strings):
@@ -31,4 +35,11 @@ def file_write(letter):
     returns:None
     """
     
-print(encryp(strings))
+    result = encryp(letter)
+    file1 = open("Result.txt","a+")
+    file1.write(f"{result} \n")
+    file1.close()
+
+
+
+file_write(sys.argv[1])
